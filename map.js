@@ -126,7 +126,7 @@ Map.prototype.get = function(key){
  * @api private
  */
 
-Map.prototype.color = function(weight) {
+Map.prototype.color = function(weight){
   var len = this._colors.length
     , ranges = []
     , r = 1 / len;
@@ -145,11 +145,12 @@ Map.prototype.color = function(weight) {
 /**
  * Set color of each path on the map.
  *
+ * @param {Boolean} animate
  * @return {Map}
  * @api public
  */
 
-Map.prototype.colorize = function(animated){
+Map.prototype.colorize = function(animate){
   var min = this.get('min')
     , max = this.get('max');
 
@@ -159,7 +160,7 @@ Map.prototype.colorize = function(animated){
       , path = this.find(k)
       , color = this.color(weight);
 
-    if (animated) {
+    if (animate) {
       path.animate({ fill: color }, 1000, '<>');
     } else {
       path.attr("fill", color);
@@ -170,7 +171,7 @@ Map.prototype.colorize = function(animated){
 };
 
 /**
- * Draw `Map`.
+ * Draw on `el`.
  *
  * @return {Map}
  * @api public

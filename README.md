@@ -23,17 +23,20 @@ document.body.appendChild(map.el);
 
 Initialize `Map` with given `Document`.
 
+**Note:** All paths must be named on your `SVG` document through the `id`
+attribute.
+
 ### Map#size(width, height)
 
 Set `width` and `height` dimensions.
 
 ### Map#scale(amount)
 
-Adds scale by given amount to the paths.
+Adds scale by given `amount` to each path.
 
 ### Map#style(attributes)
 
-Set the `attributes` for every path. 
+Set the `attributes` for all paths.
 
 ### Map#find(id)
 
@@ -41,7 +44,7 @@ Find path with given `id`.
 
 ### Map#set(key, value)
 
-Set value for key. 
+Set `value` for `key`.
 
 ### Map#colors(colors)
 
@@ -49,13 +52,11 @@ Set range of colors.
 
 ### Map#colorize([animate])
 
-Set color of each path on the map.
+Update `fill` color of each path, animation disabled by default.
 
 ### Map#draw
 
-Draw `Map`. Useful if you change colors or size values.
-
-Note: You must name each path in your `SVG` document through the `id` attribute.
+Draw on `el`. Useful if you have changed colors or size values.
 
 ## License
 
