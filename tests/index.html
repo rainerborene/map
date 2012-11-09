@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Map</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://raw.github.com/DmitryBaranovskiy/raphael/master/raphael-min.js"></script>
+    <script src="../maps.js"></script>
+    <script>
+      window.onload = function() {
+        $.get('brasil.svg', function(data) {
+          var map = new Map(data);
+
+          map.colors("#0B486B", "#3B8686", "#79BD9A");
+          map.set('para', Math.random() * 1000);
+          map.set('goias', Math.random() * 1000);
+          map.set('mato-grosso', Math.random() * 1000);
+          map.set('minas-gerais', Math.random() * 1000);
+          map.set('sao-paulo', Math.random() * 1000);
+          map.set('amazonas', Math.random() * 1000);
+          map.set('bahia', Math.random() * 1000);
+          map.colorize();
+
+          window.map = map;
+
+          document.body.appendChild(map.el);
+        });
+      };
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
