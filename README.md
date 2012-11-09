@@ -9,10 +9,12 @@ Simple abstraction to work with `SVG` maps.
 ```js
 var map = new Map(svg);
 
-map.colors('red', 'green');
+map.colors("#0B486B", "#3B8686", "#79BD9A");
 map.set('minas-gerais',300);
 map.set('sao-paulo', 500);
 map.colorize();
+
+document.body.appendChild(map.el);
 ```
 
 ## API
