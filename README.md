@@ -1,6 +1,6 @@
 # Map
 
-Simple abstraction to work with `SVG` maps.
+Simple abstraction to work with `SVG` based maps.
 
 ![js map component](http://f.cl.ly/items/0B3M2w0Z2Y2p46461d0c/Screen%20Shot%202012-11-09%20at%2011.25.20%20AM.png)
 
@@ -10,7 +10,7 @@ Simple abstraction to work with `SVG` maps.
 var map = new Map(svg);
 
 map.colors("#0B486B", "#3B8686", "#79BD9A");
-map.set('minas-gerais',300);
+map.set('minas-gerais', 300);
 map.set('sao-paulo', 500);
 map.colorize();
 
